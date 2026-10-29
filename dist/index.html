@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#173db5">
+<meta name="description" content="A proposed merchandise, campus pickup, and delivery experience for The Den at Rust College. Sample products, prices, and simulated orders.">
+<title>The Den — Bearcat pride, wherever you go</title>
+<link rel="icon" type="image/png" href="assets/bearcat-logo.png">
+<link rel="stylesheet" href="styles.css"><script defer src="app.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="header">
+<a class="brand" href="#shop" aria-label="The Den home"><img class="brand-mark" src="assets/bearcat-logo.png" alt="" width="64" height="64"><span class="brand-text"><span class="brand-word">THE DEN</span><span class="brand-caption">RUST COLLEGE</span></span></a>
+<nav class="desktop-nav" aria-label="Main navigation"><a href="#collection" data-action="shop">Shop the collection</a><button data-action="how">Pickup &amp; delivery</button></nav>
+<div class="header-actions"><button class="account-button" data-action="account"><svg width="17" height="17" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="6.5" r="3.8" stroke="currentColor" stroke-width="1.4"/><path d="M2.5 18.5c.9-3.9 3.8-5.8 7.5-5.8s6.6 1.9 7.5 5.8" stroke="currentColor" stroke-width="1.4"/></svg> <span>Sign in</span></button><button class="bag-button" data-action="bag" aria-label="Open shopping bag"><svg width="18" height="21" viewBox="0 0 20 24" fill="none" aria-hidden="true"><path d="M2 7h16v15H2zM6 8V5a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.4"/></svg> Bag <span class="bag-count" id="bag-count">0</span></button></div>
+</header>
+<main id="main">
+<div id="shop-view">
+<section class="hero" aria-labelledby="hero-heading">
+<div class="hero-copy"><h1 id="hero-heading"><span class="hero-line"><span>Bearcat</span> <span>born.</span></span><span class="hero-line hero-accent"><span>Bearcat</span> <span>worn.</span></span></h1><p class="hero-description">Hoodies, tees, caps and keepsakes for students, alumni, and every Bearcat fan. Pick up on campus in Holly Springs, or get it shipped anywhere in the U.S.</p><div class="hero-buttons"><a class="button button-blue" href="#collection">Shop the collection</a><button class="hero-link" data-action="how">How pickup &amp; delivery work</button></div></div>
+<div class="hero-visual"><div id="hero-product" class="hero-product"></div><button class="hero-product-label" data-action="product" data-id="hoodie"><span class="hp-name">The Bearcat Hoodie</span><span class="hp-price">$58</span><span class="hp-cta">Shop now</span></button></div>
+</section>
+<div class="promo-marquee" role="region" aria-label="Store offers"><div class="marquee-track" id="marquee-track"></div></div>
+<section class="collection section-wrap" id="collection" aria-labelledby="collection-heading">
+<div class="section-head"><div><p class="eyebrow">YOUR NEXT CAMPUS CLASSIC</p><h2 id="collection-heading">The collection<span class="count-small"> / 08</span></h2></div><p>Everyday favorites. Rust through and through.<br><span class="muted">All items, designs, prices and stock are samples.</span></p></div>
+<div class="collection-controls"><div class="filter-tabs" role="group" aria-label="Filter products"><button class="active" data-action="filter" data-category="All" aria-pressed="true">All items</button><button data-action="filter" data-category="Apparel" aria-pressed="false">Apparel</button><button data-action="filter" data-category="Headwear" aria-pressed="false">Headwear</button><button data-action="filter" data-category="Accessories" aria-pressed="false">Accessories</button><button data-action="filter" data-category="New" aria-pressed="false">New arrivals</button><button data-action="filter" data-category="Clearance" aria-pressed="false">Clearance</button></div><div class="search-sort"><label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Find your favorite" aria-label="Search merchandise"></label><label class="sort-box"><span class="sr-only">Sort products</span><select id="sort"><option value="featured">Featured</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option></select></label></div></div>
+<p class="sr-only" id="product-count" aria-live="polite"></p><div class="product-grid" id="product-grid"></div>
+</section>
+<section class="spotlights section-wrap" aria-label="New arrivals and clearance">
+<div class="spotlight"><div class="spotlight-media spot-new" id="spot-new-art" aria-hidden="true"></div><div class="spotlight-copy"><p class="spot-label">Just dropped</p><h2>New arrivals</h2><p>Fresh gear for the season ahead: the Game Day Scarf, the Campus Cap, and the heavyweight Bearcat Hoodie.</p><button class="button button-blue" data-action="shop-filter" data-category="New">Shop now</button></div></div>
+<div class="spotlight spotlight-reverse"><div class="spotlight-media spot-clear" id="spot-clear-art" aria-hidden="true"></div><div class="spotlight-copy"><p class="spot-label">Up to 25% off</p><h2>Clearance</h2><p>Last call on Bearcat favorites like the 1866 Crewneck and the Morning Mug. Once they're gone, they're gone.</p><button class="button button-blue" data-action="shop-filter" data-category="Clearance">Shop now</button></div></div>
+</section>
+<section class="founders-banner section-wrap"><div><p class="eyebrow">NOVEMBER 1–8, 2026</p><h2>Come for the memories.<br>Leave with a little Rust.</h2></div><a href="https://rustcollege.edu/160th-founders-week/" target="_blank" rel="noopener" class="button button-white">See the Founders Week schedule ↗</a></section>
+</div>
+<section id="account-view" class="section-wrap account-view" hidden aria-labelledby="account-heading">
+<div class="account-shell">
+<aside class="account-side"><img class="account-logo" src="assets/bearcat-logo.png" alt="" width="120" height="120"><p class="eyebrow">THE DEN ACCOUNT</p><h2>Your Bearcat pride,<br><em>all in one place.</em></h2><ul class="account-perks"><li>Track your pickup and delivery orders</li><li>Save your shipping address for faster checkout</li><li>Early access to new drops and Founders Week releases</li></ul></aside>
+<div class="account-main">
+<div class="auth-tabs" role="tablist" aria-label="Account"><button role="tab" id="tab-signin" class="active" aria-selected="true" aria-controls="signin-form" data-action="auth-tab" data-tab="signin">Sign in</button><button role="tab" id="tab-signup" aria-selected="false" aria-controls="signup-form" tabindex="-1" data-action="auth-tab" data-tab="signup">Create account</button></div>
+<h1 id="account-heading" class="account-heading">Welcome back.</h1><p class="account-sub" id="account-sub">Sign in to see your orders and saved details.</p>
+<form id="signin-form" class="auth-form" role="tabpanel" aria-labelledby="tab-signin"><label for="signin-email">Email</label><input id="signin-email" type="email" autocomplete="email" required><label for="signin-password">Password</label><div class="password-field"><input id="signin-password" type="password" autocomplete="current-password" required><button type="button" class="password-toggle" data-action="toggle-password" aria-controls="signin-password" aria-label="Show password">Show</button></div><div class="auth-row"><label class="check"><input type="checkbox"> Keep me signed in</label><button type="button" class="auth-link" data-action="forgot">Forgot password?</button></div><button type="submit" class="button button-blue full-width">Sign in <span aria-hidden="true">→</span></button><p class="auth-status" role="status"></p><p class="auth-switch">New to The Den? <button type="button" class="auth-link" data-action="auth-tab" data-tab="signup">Create an account</button></p></form>
+<form id="signup-form" class="auth-form" role="tabpanel" aria-labelledby="tab-signup" hidden><label for="signup-name">Full name</label><input id="signup-name" type="text" autocomplete="name" required maxlength="60"><label for="signup-email">Email</label><input id="signup-email" type="email" autocomplete="email" required><label for="signup-password">Password</label><div class="password-field"><input id="signup-password" type="password" autocomplete="new-password" required minlength="8"><button type="button" class="password-toggle" data-action="toggle-password" aria-controls="signup-password" aria-label="Show password">Show</button></div><p class="auth-hint">At least 8 characters.</p><div class="auth-row"><label class="check"><input type="checkbox" checked> Email me about new drops</label></div><button type="submit" class="button button-blue full-width">Create account <span aria-hidden="true">→</span></button><p class="auth-status" role="status"></p><p class="auth-switch">Already have an account? <button type="button" class="auth-link" data-action="auth-tab" data-tab="signin">Sign in</button></p></form>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer section-wrap">
+<div class="footer-top">
+<div class="footer-about"><span class="footer-brand"><img class="brand-mark" src="assets/bearcat-logo.png" alt="" width="56" height="56"><span class="brand-text"><span class="brand-word">THE DEN</span><span class="brand-caption">RUST COLLEGE</span></span></span><p>The student-run store for Bearcat gear. Pick up on campus in Holly Springs, or get it shipped anywhere in the U.S.</p></div>
+<nav class="footer-col" aria-labelledby="footer-shop"><h2 id="footer-shop">Shop</h2><ul><li><button data-action="shop-filter" data-category="All">All items</button></li><li><button data-action="shop-filter" data-category="New">New arrivals</button></li><li><button data-action="shop-filter" data-category="Clearance">Clearance</button></li><li><button data-action="shop-filter" data-category="Apparel">Apparel</button></li><li><button data-action="shop-filter" data-category="Accessories">Accessories</button></li></ul></nav>
+<nav class="footer-col" aria-labelledby="footer-help"><h2 id="footer-help">Help</h2><ul><li><button data-action="how">Pickup &amp; delivery</button></li><li><button data-action="bag">Your bag</button></li><li><button data-action="account">Sign in</button></li><li><button data-action="account" data-tab="signup">Create an account</button></li></ul></nav>
+<div class="footer-col"><h2>Rust College</h2><ul><li><a href="https://rustcollege.edu/" target="_blank" rel="noopener">rustcollege.edu ↗</a></li><li><a href="https://rustcollege.edu/160th-founders-week/" target="_blank" rel="noopener">Founders Week 2026 ↗</a></li></ul><p>Holly Springs, Mississippi</p></div>
+</div>
+<div class="footer-bottom"><span>© 2026 The Den · Student-run since 2026</span><span>Rust College names and logos belong to Rust College.</span></div>
+</footer>
+<dialog id="product-dialog" class="product-dialog" aria-labelledby="product-title"></dialog><dialog id="bag-dialog" class="bag-dialog" aria-labelledby="bag-title"></dialog><dialog id="info-dialog" class="info-dialog" aria-labelledby="info-title"></dialog><div id="toast" class="toast" role="status" aria-live="polite"></div>
+<noscript><div class="noscript">Enable JavaScript to explore the interactive merchandise and pickup demo.</div></noscript>
+</body></html>
+
